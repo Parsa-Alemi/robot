@@ -55,7 +55,7 @@ local function get_weather(location)
    local weather = json:decode(b)
    local city = weather.name
    local country = weather.sys.country
-   local temp = 'دمای شهر '..city..' هم اکنون '..weather.main.temp..' درجه سانتی گراد می باشد\n____________________\n @BeyondTeam :)'
+   local temp = 'دمای شهر '..city..' هم اکنون '..weather.main.temp..' درجه سانتی گراد می باشد\n____________________\n Parsa/Alpha/ :)'
    local conditions = 'شرایط فعلی آب و هوا : '
 
    if weather.weather[1].main == 'Clear' then
@@ -79,7 +79,7 @@ local function calc(exp)
    b,c = http.request(url)
    text = nil
   if c == 200 then
-    text = 'Result = '..b..'\n____________________\n @BeyondTeam :)'
+    text = 'Result = '..b..'\n____________________\n Parsa/Alpha/ :)'
   elseif c == 400 then
     text = b
   else
@@ -249,7 +249,7 @@ end
    if matches[1] == "tr" and is_sudo(msg) then 
      url = https.request('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20160119T111342Z.fd6bf13b3590838f.6ce9d8cca4672f0ed24f649c1b502789c9f4687a&format=plain&lang='..URL.escape(matches[2])..'&text='..URL.escape(matches[3]))
      data = json:decode(url)
-   return 'زبان : '..data.lang..'\nترجمه : '..data.text[1]..'\n____________________\n @BeyondTeam :)'
+   return 'زبان : '..data.lang..'\nترجمه : '..data.text[1]..'\n____________________\n Parsa/Alpha/ :)'
 end
 -----------------------
 if matches[1] == 'short' and is_sudo(msg) then
@@ -261,7 +261,7 @@ if matches[1] == 'short' and is_sudo(msg) then
   local opizo = http.request('http://api.gpmod.ir/shorten/?url='..URL.escape(matches[2])..'&username=mersad565@gmail.com')
   local u2s = http.request('http://u2s.ir/?api=1&return_text=1&url='..URL.escape(matches[2]))
   local llink = http.request('http://llink.ir/yourls-api.php?signature=a13360d6d8&action=shorturl&url='..URL.escape(matches[2])..'&format=simple')
-    return ' 🌐لینک اصلی :\n'..data.data.long_url..'\n\nلینکهای کوتاه شده با 6 سایت کوتاه ساز لینک : \n》کوتاه شده با bitly :\n___________________________\n'..data.data.url..'\n___________________________\n》کوتاه شده با yeo :\n'..yeo..'\n___________________________\n》کوتاه شده با اوپیزو :\n'..opizo..'\n___________________________\n》کوتاه شده با u2s :\n'..u2s..'\n___________________________\n》کوتاه شده با llink : \n'..llink..'\n___________________________\n》لینک کوتاه شده با yon : \nyon.ir/'..jdat.output..'\n____________________\n @BeyondTeam :)'
+    return ' 🌐لینک اصلی :\n'..data.data.long_url..'\n\nلینکهای کوتاه شده با 6 سایت کوتاه ساز لینک : \n》کوتاه شده با bitly :\n___________________________\n'..data.data.url..'\n___________________________\n》کوتاه شده با yeo :\n'..yeo..'\n___________________________\n》کوتاه شده با اوپیزو :\n'..opizo..'\n___________________________\n》کوتاه شده با u2s :\n'..u2s..'\n___________________________\n》کوتاه شده با llink : \n'..llink..'\n___________________________\n》لینک کوتاه شده با yon : \nyon.ir/'..jdat.output..'\n____________________\n Parsa/Alpha/ :)'
 end
 ------------------------
  local receiver = get_receiver(msg)
@@ -274,7 +274,7 @@ end
     
       if matches[1]:lower() == "photo" and is_sudo(msg) then
      redis:get("sticker:photo")
-    send_large_msg(receiver, 'By @BeyondTeam :)', ok_cb, false)
+    send_large_msg(receiver, 'By Parsa/Alpha/ :)', ok_cb, false)
         load_document(msg.reply_id, toimage, msg)
     end
 end
@@ -288,7 +288,7 @@ end
        end
       if matches[1]:lower() == "sticker" and is_sudo(msg) then
      redis:get("photo:sticker")  
-    send_large_msg(receiver, 'By @BeyondTeam :)', ok_cb, false)
+    send_large_msg(receiver, 'By Parsa/Alpha/ :)', ok_cb, false)
         load_photo(msg.reply_id, tosticker, msg)
     end
 end
@@ -325,7 +325,7 @@ local  file = download_to_file(url,'text.webp')
 end
  -------------------
    if matches[1] == "version"  then --change this with anything you want
-        local text = "Beyond Self Bot V2.7\nAn Fun Bot Based On TeleSeed Written In Lua\n\nSudo User :\nDeveloper&Founder : @SoLiD021\nDeVeloper&Manager : @CliApi\n\nTeam Channel :\n@BeyondTeam\n\nSpecial Thx To :\nSeed Team\nAnd All My Friends :D\n\nBeyond Self Bot Version 2.7 On GitHub :\nGithub.com/BeyondTeam/Self-Bot"
+        local text = " Self Bot Version 1.0 By Parsa/Alpha/"
 return reply_msg(msg.id, text, ok_cb, false)
   end
 ---------------
@@ -392,6 +392,3 @@ patterns = {
  }, 
 run = run,
 }
-
---by @BeyondTeam :)
---By @CliApi
