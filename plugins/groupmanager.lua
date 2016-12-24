@@ -318,15 +318,6 @@ if matches[1] == 'id' then
                 get_message(msg.reply_id, get_id_who, {receiver=get_receiver(msg)})
                 return
             end
-    if string.match(matches[2], '^%d+$') then
-                print(1)
-                user_info('user#id'..matches[2], whoisid, {chat_type=chat_type, chat_id=chat_id, user_id=matches[2]})
-                return
-            else
-                local member = string.gsub(matches[2], '@', '')
-                resolve_username(member, whoisname, {chat_id=chat_id, member=member, chat_type=chat_type})
-                return
-            end
         else
             return
         end
