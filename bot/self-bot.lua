@@ -251,6 +251,7 @@ function create_config( )
     "member-control",
     "plugins",
     "self-manager",
+			"addpl"
     },
     sudo_users = {269383514},
     moderation = {data = 'data/moderation.json'},
