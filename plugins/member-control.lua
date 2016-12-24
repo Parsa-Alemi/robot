@@ -1,6 +1,5 @@
 do
---Begin Member Manager By @SoLiD021
---silent_user By @SoLiD021
+	
 local function silentuser_by_reply(extra, success, result)
  	 local user_id = result.from.peer_id
 		local receiver = extra.receiver
@@ -289,4 +288,4 @@ return {
 pre_process = pre_process
 }
 end
---end member-control by @SoLiD021
+
