@@ -19,6 +19,5 @@ cd .luarocks/bin
 ./luarocks-5.2 install fakeredis
 cd ../..
 ./launch.sh 
- بعد از زدن این دستور از شما شماره و کد تایید میخواد
 Then Enter Your Phone And Confirmation Code
 ```
